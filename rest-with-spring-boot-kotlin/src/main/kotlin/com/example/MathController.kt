@@ -9,9 +9,20 @@ class MathController {
 
     @RequestMapping(value = ["/sum/{numberOne}/{numberTwo}"])
     fun sum(
-        @PathVariable(value = "numberOne") numberOne: Double,
-        @PathVariable(value = "numberTwo") numberTwo: Double
+        @PathVariable(value = "numberOne") numberOne: String,
+        @PathVariable(value = "numberTwo") numberTwo: String
     ): Double {
-        return numberOne + numberTwo
+        if (!isNumeric(numberOne) && !isNumeric(numberTwo)) {
+            throw IllegalArgumentException("Please set a numeric value!")
+        }
+        return convertDouble(numberOne) + convertDouble(numberTwo)
+    }
+
+    private fun convertDouble(number: String): Double {
+        return 0.0
+    }
+
+    private fun isNumeric(number: String): Boolean {
+        return false
     }
 }
