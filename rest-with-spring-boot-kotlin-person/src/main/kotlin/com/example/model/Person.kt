@@ -1,4 +1,5 @@
 package com.example.model
 
-class Person {
-}
+data class Person (
+    var id: Long = 0
+)
