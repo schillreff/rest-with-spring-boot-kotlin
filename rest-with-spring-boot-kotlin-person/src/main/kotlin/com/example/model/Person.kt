@@ -1,5 +1,6 @@
 package com.example.model
 
 data class Person (
-    var id: Long = 0
+    var id: Long = 0,
+    var firstName: String = "",
 )
