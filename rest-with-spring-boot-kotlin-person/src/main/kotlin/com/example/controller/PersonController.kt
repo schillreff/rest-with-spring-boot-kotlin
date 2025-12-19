@@ -14,7 +14,8 @@ class PersonController {
         const val UNSUPPORTED_MATH_OPERATION_EXCEPTION_MESSAGE = "Please set a numeric value!"
     }
 
-    private val math: SimpleMath = SimpleMath()
+    @Autowired
+    private lateinit var service: PersonService
 
     @RequestMapping(value = ["/sum/{numberOne}/{numberTwo}"])
     fun sum(
