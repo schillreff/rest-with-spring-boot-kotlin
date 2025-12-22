@@ -11,6 +11,8 @@ class PersonService {
 
     fun findById(id: Long): Person {
         logger.info("Finding one person!")
+
+        val person = Person()
     }
 
 }
