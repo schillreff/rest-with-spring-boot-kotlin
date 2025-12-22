@@ -13,6 +13,7 @@ class PersonService {
         logger.info("Finding one person!")
 
         val person = Person()
+        person.id = counter.incrementAndGet()
     }
 
 }
