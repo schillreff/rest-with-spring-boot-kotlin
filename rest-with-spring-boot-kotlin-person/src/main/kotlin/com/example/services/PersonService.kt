@@ -9,4 +9,8 @@ class PersonService {
 
     private val logger = Logger.getLogger(PersonService::class.java.name)
 
+    fun findById(id: Long): Person {
+        logger.info("Finding one person!")
+    }
+
 }
