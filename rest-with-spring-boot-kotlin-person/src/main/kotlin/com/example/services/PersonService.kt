@@ -1,6 +1,9 @@
 package com.example.services
 
+import com.example.model.Person
 import org.springframework.stereotype.Service
+import java.util.concurrent.atomic.AtomicLong
+import java.util.logging.Logger
 
 @Service
 class PersonService {
@@ -14,6 +17,8 @@ class PersonService {
 
         val person = Person()
         person.id = counter.incrementAndGet()
+
+        return person
     }
 
 }

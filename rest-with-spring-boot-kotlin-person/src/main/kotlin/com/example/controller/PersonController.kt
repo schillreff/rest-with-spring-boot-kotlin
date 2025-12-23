@@ -2,6 +2,7 @@ package com.example.controller
 
 import com.example.converters.NumberConverter
 import com.example.exceptions.UnsupportedMathOperationException
+import com.example.services.PersonService
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -21,6 +22,6 @@ class PersonController {
         if (!NumberConverter.isNumeric(numberOne) || !NumberConverter.isNumeric(numberTwo)) {
             throw UnsupportedMathOperationException("Please set a numeric value!")
         }
-        return 1;
+        return 1.0;
     }
 }
