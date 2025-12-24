@@ -20,6 +20,8 @@ class PersonService {
         person.firstName = "Leandro"
         person.lastName = "Schillreff"
         person.address = "Roraima"
+        person.gender = "Male"
+
         return person
     }
 
