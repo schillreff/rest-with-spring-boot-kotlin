@@ -7,15 +7,17 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.web.bind.annotation.RequestMethod
 
 @RestController
+@RequestMapping("/person")
 class PersonController {
 
     @Autowired
     private lateinit var service: PersonService
 
 
-    @RequestMapping(value = ["/sum/{numberOne}/{numberTwo}"])
+    @RequestMapping(value = ["/{id}"], method = [(RequestMethod.GET)])
     fun sum(
         @PathVariable(value = "numberOne") numberOne: String, @PathVariable(value = "numberTwo") numberTwo: String
     ): Double {
