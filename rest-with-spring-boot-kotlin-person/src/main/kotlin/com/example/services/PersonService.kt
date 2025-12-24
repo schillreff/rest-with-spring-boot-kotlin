@@ -18,6 +18,7 @@ class PersonService {
         val person = Person()
         person.id = counter.incrementAndGet()
         person.firstName = "Leandro"
+        person.lastName = "Schillreff"
         return person
     }
 
