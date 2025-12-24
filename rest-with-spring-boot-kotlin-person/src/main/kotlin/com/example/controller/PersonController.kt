@@ -16,7 +16,6 @@ class PersonController {
     @Autowired
     private lateinit var service: PersonService
 
-
     @RequestMapping(value = ["/{id}"], method = [RequestMethod.GET], produces = [MediaType.APPLICATION_JSON_VALUE])
     fun sum(
         @PathVariable(value = "id") id: Long
