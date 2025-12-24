@@ -19,6 +19,7 @@ class PersonService {
         person.id = counter.incrementAndGet()
         person.firstName = "Leandro"
         person.lastName = "Schillreff"
+        person.address = "Roraima"
         return person
     }
 
