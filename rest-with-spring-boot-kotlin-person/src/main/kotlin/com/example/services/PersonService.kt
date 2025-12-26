@@ -27,7 +27,9 @@ class PersonService {
 
     fun findAll(): List<Person> {
 
-        logger.info("Finding one person!")
+        logger.info("Finding all people!")
+
+        val persons: MutableList<Person>
 
         val person = Person()
         person.id = counter.incrementAndGet()
