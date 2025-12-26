@@ -29,7 +29,7 @@ class PersonService {
 
         logger.info("Finding all people!")
 
-        val persons: MutableList<Person>
+        val persons: MutableList<Person> = ArrayList()
 
         val person = Person()
         person.id = counter.incrementAndGet()
