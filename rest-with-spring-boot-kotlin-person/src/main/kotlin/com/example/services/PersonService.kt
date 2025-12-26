@@ -25,4 +25,17 @@ class PersonService {
         return person
     }
 
+    fun findAll(id: Long): Person {
+        logger.info("Finding one person!")
+
+        val person = Person()
+        person.id = counter.incrementAndGet()
+        person.firstName = "Leandro"
+        person.lastName = "Schillreff"
+        person.address = "Roraima"
+        person.gender = "Male"
+
+        return person
+    }
+
 }
