@@ -31,14 +31,18 @@ class PersonService {
 
         val persons: MutableList<Person> = ArrayList()
 
-        val person = Person()
-        person.id = counter.incrementAndGet()
-        person.firstName = "Leandro"
-        person.lastName = "Schillreff"
-        person.address = "Roraima"
-        person.gender = "Male"
+        for (i in 0..7) {
+            val person = Person()
+            person.id = counter.incrementAndGet()
+            person.firstName = "Leandro"
+            person.lastName = "Schillreff"
+            person.address = "Roraima"
+            person.gender = "Male"
 
-        return person
+            persons.add(person)
+        }
+
+        return persons
     }
 
 }
