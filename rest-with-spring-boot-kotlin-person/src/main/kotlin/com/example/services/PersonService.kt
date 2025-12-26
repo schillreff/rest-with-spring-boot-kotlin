@@ -25,7 +25,8 @@ class PersonService {
         return person
     }
 
-    fun findAll(id: Long): Person {
+    fun findAll(): List<Person> {
+
         logger.info("Finding one person!")
 
         val person = Person()
