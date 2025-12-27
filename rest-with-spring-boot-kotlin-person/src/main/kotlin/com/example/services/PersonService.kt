@@ -33,13 +33,6 @@ class PersonService {
 
         for (i in 0..7) {
             val person = mockPerson()
-
-            person.id = counter.incrementAndGet()
-            person.firstName = "Leandro"
-            person.lastName = "Schillreff"
-            person.address = "Roraima"
-            person.gender = "Male"
-
             persons.add(person)
         }
 
@@ -48,6 +41,11 @@ class PersonService {
 
     private fun mockPerson(): Person {
 
+        person.id = counter.incrementAndGet()
+        person.firstName = "Leandro"
+        person.lastName = "Schillreff"
+        person.address = "Roraima"
+        person.gender = "Male"
     }
 
 }
