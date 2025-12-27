@@ -32,20 +32,22 @@ class PersonService {
         val persons: MutableList<Person> = ArrayList()
 
         for (i in 0..7) {
-            val person = mockPerson()
+            val person = mockPerson("Leandro")
             persons.add(person)
         }
 
         return persons
     }
 
-    private fun mockPerson(): Person {
-
+    private fun mockPerson(name: String): Person {
+        val person = Person()
         person.id = counter.incrementAndGet()
-        person.firstName = "Leandro"
+        person.firstName = "Person Name: ${name}"
         person.lastName = "Schillreff"
         person.address = "Roraima"
         person.gender = "Male"
+
+        return person
     }
 
 }
