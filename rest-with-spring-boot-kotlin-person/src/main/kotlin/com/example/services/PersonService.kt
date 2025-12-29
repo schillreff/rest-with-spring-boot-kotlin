@@ -43,6 +43,8 @@ class PersonService {
         return person
     }
 
+    fun update ( person: Person) = person
+
 
     private fun mockPerson(name: String): Person {
         val person = Person()
