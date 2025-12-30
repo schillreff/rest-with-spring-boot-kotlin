@@ -39,11 +39,9 @@ class PersonService {
         return person
     }
 
-    fun create(person: Person): Person {
-        return person
-    }
+    fun create(person: Person) = person
 
-    fun update ( person: Person) = person
+    fun update(person: Person) = person
 
 
     private fun mockPerson(name: String): Person {
