@@ -43,6 +43,10 @@ class PersonService {
 
     fun update(person: Person) = person
 
+    fun delete(id: Long) {
+
+    }
+
 
     private fun mockPerson(name: String): Person {
         val person = Person()
