@@ -28,4 +28,11 @@ class PersonController {
         return service.findById(id)
     }
 
+    @RequestMapping(value = ["/{id}"], method = [RequestMethod.GET], produces = [MediaType.APPLICATION_JSON_VALUE])
+    fun findById(
+        @PathVariable(value = "id") id: Long
+    ): Person {
+        return service.findById(id)
+    }
+
 }
