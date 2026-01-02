@@ -41,7 +41,7 @@ class PersonController {
     }
 
     @RequestMapping(
-        method = [RequestMethod.POST],
+        method = [RequestMethod.PUT],
         consumes = [MediaType.APPLICATION_JSON_VALUE],
         produces = [MediaType.APPLICATION_JSON_VALUE]
     )
