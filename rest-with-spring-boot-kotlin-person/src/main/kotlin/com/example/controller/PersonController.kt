@@ -40,4 +40,15 @@ class PersonController {
         return service.create(person)
     }
 
+    @RequestMapping(
+        method = [RequestMethod.PUT],
+        consumes = [MediaType.APPLICATION_JSON_VALUE],
+        produces = [MediaType.APPLICATION_JSON_VALUE]
+    )
+    fun update(
+        @RequestBody person: Person
+    ): Person {
+        return service.create(person)
+    }
+
 }
