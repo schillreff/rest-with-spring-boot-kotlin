@@ -48,7 +48,7 @@ class PersonController {
     fun update(
         @RequestBody person: Person
     ): Person {
-        return service.create(person)
+        return service.update(person)
     }
 
     @RequestMapping(value = ["/{id}"], method = [RequestMethod.DELETE], produces = [MediaType.APPLICATION_JSON_VALUE])
