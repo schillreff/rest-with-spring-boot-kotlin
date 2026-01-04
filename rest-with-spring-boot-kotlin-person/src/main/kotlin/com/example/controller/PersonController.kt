@@ -54,7 +54,7 @@ class PersonController {
     @RequestMapping(value = ["/{id}"], method = [RequestMethod.DELETE], produces = [MediaType.APPLICATION_JSON_VALUE])
     fun delete(
         @PathVariable(value = "id") id: Long
-    ): Person {
+    ) {
         return service.delete(id)
     }
 
