@@ -1,1 +1,5 @@
-spring.application.name=rest-with-spring-boot-kotlin
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jbc.Driver
+    url: jdbc:mysql://localhost:3306
+
