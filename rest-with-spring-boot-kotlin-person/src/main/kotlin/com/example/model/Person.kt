@@ -1,7 +1,19 @@
 package com.example.model
 
-data class Person (
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
+import jakarta.persistence.Table
+
+@Entity
+@Table(name = "person")
+data class Person(
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long = 0,
+    @Column(name = "first_name")
     var firstName: String = "",
     var lastName: String = "",
     var address: String = "",
