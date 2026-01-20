@@ -1,5 +1,6 @@
 package com.example.model
 
+import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -12,6 +13,7 @@ data class Person(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long = 0,
+    @Column(name = "first_name")
     var firstName: String = "",
     var lastName: String = "",
     var address: String = "",
