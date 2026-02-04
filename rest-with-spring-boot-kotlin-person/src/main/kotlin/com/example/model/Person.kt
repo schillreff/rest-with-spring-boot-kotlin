@@ -17,7 +17,7 @@ data class Person(
     var firstName: String = "",
     @Column(name = "last_name")
     var lastName: String = "",
-    @Column(name = "address")
+    @Column
     var address: String = "",
     @Column(name = "gender")
     var gender: String = ""
