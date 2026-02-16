@@ -14,7 +14,7 @@ data class Person(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long = 0,
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
     var firstName: String = "",
 
     @Column(name = "last_name")
@@ -22,7 +22,7 @@ data class Person(
 
     @Column
     var address: String = "",
-    
+
     @Column
     var gender: String = ""
 )
