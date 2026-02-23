@@ -20,7 +20,7 @@ data class Person(
     @Column(name = "last_name", nullable = false)
     var lastName: String = "",
 
-    @Column
+    @Column(nullable = false)
     var address: String = "",
 
     @Column
