@@ -23,6 +23,6 @@ data class Person(
     @Column(nullable = false)
     var address: String = "",
 
-    @Column
+    @Column(nullable = false)
     var gender: String = ""
 )
