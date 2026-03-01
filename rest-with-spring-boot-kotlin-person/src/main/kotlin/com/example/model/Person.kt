@@ -14,7 +14,7 @@ data class Person(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long = 0,
 
-    @Column(name = "first_name", nullable = false)
+    @Column(name = "first_name", nullable = false, length =  80)
     var firstName: String = "",
 
     @Column(name = "last_name", nullable = false)
