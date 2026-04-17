@@ -28,6 +28,6 @@ class CustomizedResponseEntityExceptionHandler : ResponseEntityExceptionHandler(
             Date(), ex.message, request.getDescription(false)
         )
 
-        return ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.BAD_REQUEST)
+        return ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_FOUND)
     }
 }
