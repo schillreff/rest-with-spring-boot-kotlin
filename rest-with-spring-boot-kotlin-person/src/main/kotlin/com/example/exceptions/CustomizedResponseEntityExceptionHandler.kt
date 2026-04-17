@@ -23,7 +23,7 @@ class CustomizedResponseEntityExceptionHandler : ResponseEntityExceptionHandler(
     }
 
     @ExceptionHandler(ResourceNotFoundException::class)
-    fun handleBadRequestExceptions(ex: Exception, request: WebRequest): ResponseEntity<ExceptionResponse> {
+    fun handleResourceNotFoundExceptions(ex: Exception, request: WebRequest): ResponseEntity<ExceptionResponse> {
         val exceptionResponse = ExceptionResponse(
             Date(), ex.message, request.getDescription(false)
         )
